@@ -1,0 +1,49 @@
+<div id="Tabela">
+    <h1 id="titulo">Usuários Cadastrados</h1>
+
+    {{#if usuarios.length}}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each usuarios}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{nome}}</td>
+                        <td>{{Cargo}}</td>
+                        <td>
+                            <form 
+                                action="/admin/usuarios/apagar/{{id}}" 
+                                method="POST" 
+                                onsubmit="return confirmarExclusao('{{nome}}', '{{id}}')"
+                            >
+                                <button 
+                                    type="submit" 
+                                    style="border:none; background:none; cursor:pointer; color:red; font-weight:bold;"
+                                >
+                                    🗑️ Apagar
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <p>Nenhum usuário encontrado.</p>
+    {{/if}}
+
+    <p><a href="/" style="color:blue; text-decoration:none;">↩️ Voltar</a></p>
+</div>
+
+<script>
+    function confirmarExclusao(nome, id) {
+        return confirm(`Tem certeza que deseja apagar o usuário "${nome}" (ID: ${id})?`);
+    }
+</script>

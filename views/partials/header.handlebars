@@ -1,0 +1,16 @@
+<header>
+  <nav>
+    <ul>
+      <h1>Bem-vindo ao Nosso Restaurante!</h1>
+      <li><a href="/">INÍCIO</a></li>
+      <li><a href="/cardapio">CARDÁPIO</a></li>
+      <li><a href="/reserva/new">RESERVAS</a></li>
+      <li><a href="/Pedido/new">PEDIDOS</a></li>
+      <li><a href="/Login/new">LOGIN</a></li>
+
+      {{#if isAdmin}}
+        <li><a href="/admin/usuarios">USUÁRIOS</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>

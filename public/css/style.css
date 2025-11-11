@@ -1,0 +1,90 @@
+
+table {
+    border-collapse: collapse; 
+    width: 100%; 
+}
+
+h1 {
+    text-align: center;
+    margin: 0; 
+    padding: 0;
+}
+
+#titulo {
+    border: 4px solid black;
+    padding: 8px;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin-top: -4px; 
+    margin-bottom: 0; 
+}
+
+#Tabela {
+    list-style-type: none;
+    padding: 0 20px 20px 20px; 
+    
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border: 4px solid black;
+    overflow: hidden;
+    background-image: url("https://i.pinimg.com/736x/0f/6d/f7/0f6df799c5fef421e7bea4f19ec231e3.jpg");
+    margin-top: 0;
+    text-align: center;
+}
+
+
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #e7c79c;
+}
+
+body {
+    background-image: url("https://static.vecteezy.com/ti/fotos-gratis/p2/1948406-tampo-da-mesa-de-madeira-para-exibicao-com-fundo-desfocado-do-restaurante-gratis-foto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 3. Estilos de Bloco (limpeza de sintaxe) */
+ul {
+    list-style-type: none;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border: 4px solid black;
+    overflow: hidden;
+    background-image: url("https://i.pinimg.com/736x/0f/6d/f7/0f6df799c5fef421e7bea4f19ec231e3.jpg");
+}
+
+#basico, #aviso, #Adicao, #Edicao, #sofrimento, #Formulas, #Login, #Cadastrar {
+    text-align: center;
+    background-image: url("https://i.pinimg.com/736x/0f/6d/f7/0f6df799c5fef421e7bea4f19ec231e3.jpg");
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: 4px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}

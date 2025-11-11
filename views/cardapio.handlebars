@@ -1,0 +1,52 @@
+<div id="Tabela">
+    <h1 id="titulo">Cardápio</h1>
+    <p>Confira os produtos disponíveis:</p>
+
+    {{!-- Só mostra o botão de adicionar se for admin --}}
+    {{#if isAdmin}}
+    <a href="/admin/cardapio/add" style="display: block; margin-bottom: 20px;">
+        <button>➕ Adicionar Novo Produto</button>
+    </a>
+    {{/if}}
+    
+    {{#if produtos}}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+
+                    {{!-- Só mostra a coluna "Ações" se for admin --}}
+                    {{#if isAdmin}}
+                    <th>Ações</th> 
+                    {{/if}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each produtos}}
+                <tr>
+                    <td>{{nome}}</td>
+                    <td>R$ {{preco}}</td>
+
+                    {{!-- Só mostra botões de editar/excluir se for admin --}}
+                    {{#if ../isAdmin}}
+                    <td>
+                        <a href="/admin/cardapio/edit/{{id}}">
+                            <button>✏️ Editar</button>
+                        </a>
+                        
+                        <form action="/admin/cardapio/delete/{{id}}" method="POST" style="display: inline;">
+                            <button type="submit" onclick="return confirm('Tem certeza que deseja excluir {{nome}}?')">
+                                🗑️ Excluir
+                            </button>
+                        </form>
+                    </td>
+                    {{/if}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <p>Nenhum produto cadastrado.</p>
+    {{/if}}
+</div>
